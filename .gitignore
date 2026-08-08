@@ -1,0 +1,65 @@
+# Local secrets and environment overrides
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Editor and OS files
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# OpenCode dependencies and local runtime data
+.opencode/node_modules/
+.opencode/package.json
+.opencode/package-lock.json
+.opencode/bun.lock
+
+# CMake build directories and generated files
+build/
+build-*/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
+compile_commands.json
+Testing/
+
+# C/C++ build products
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.out
+*.app/
+
+# Debugger, profiler, and coverage output
+core
+core.*
+vgcore.*
+*.profraw
+*.profdata
+*.gcda
+*.gcno
+*.gcov
+
+# Temporary files and caches
+.cache/
+tmp/
+temp/
+*.tmp
+
+# Keep Week evidence logs under version control. They are learning deliverables.
+!Phase*/Week*/evidence/*.log
