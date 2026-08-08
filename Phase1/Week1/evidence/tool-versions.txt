@@ -1,0 +1,20 @@
+===================================================
+Execution Date: 2026-08-08 19:14:39 CST
+System / Kernel: Linux kubuntu 7.0.0-29-generic #29-Ubuntu SMP PREEMPT_DYNAMIC Fri Jul 17 20:52:35 UTC 2026 x86_64 GNU/Linux
+===================================================
+
+--- GCC ---
+gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+
+--- Clang ---
+./generate_tools_version.sh: line 3: clang++: command not found
+
+--- CMake ---
+cmake version 4.2.3
+
+--- Git ---
+git version 2.53.0
+
+--- GDB ---
+GNU gdb (Ubuntu 17.1-2ubuntu1) 17.1
+
