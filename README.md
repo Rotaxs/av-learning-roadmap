@@ -58,7 +58,9 @@
 - `project/`：本周源码、构建文件、测试与项目说明。
 - `notes/`：概念笔记、源码阅读记录和复盘。
 - `evidence/`：构建、测试、调试和性能证据。
-- `.opencode/skills/`：用于生成周计划的 OpenCode Skill。
+- `.opencode/skills/`：OpenCode 辅助 Skill，包含：
+  - `weekly-learning-roadmap`：依据总路线生成某周的详细学习计划与项目规格。
+  - `learning-progress-check`：按周路线与总路线的闸门核验每日、每周或阶段任务完成情况，并更新对应周的 `学习进度.md`。
 
 ## 使用方式
 
@@ -68,7 +70,7 @@
 4. 周末执行总验收；主链路未通过时先修复，不盲目进入下一阶段。
 5. 任务超时时优先取消增强功能，保留测试、调试证据和复盘。
 
-使用 OpenCode 时，可以直接提出“生成第 N 周的学习路线”，仓库内的 Skill 会依据总路线创建对应周计划与项目规格。
+使用 OpenCode 时，可以直接提出“生成第 N 周的学习路线”，仓库内的 `weekly-learning-roadmap` Skill 会依据总路线创建对应周计划与项目规格；每周结束后可提出“检查本周学习进度”，由 `learning-progress-check` Skill 依据路线标准核验完成情况并更新 `学习进度.md`。
 
 ## 学习原则
 
