@@ -1,0 +1,4 @@
+loading file: docs/empty.txt
+bytes=0 words=0 lines=0
+loading file: docs/a.txt
+bytes=46 words=8 lines=4
