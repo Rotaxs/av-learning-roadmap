@@ -1,8 +1,9 @@
+#include "stats.h"
 
-int add(int a, int b) {
-    int c = a + b;
-}
+// inline int a = 0;
 
 int main() {
+    // int a = 1;
+    add(1, 2);
     return 0;
 }
