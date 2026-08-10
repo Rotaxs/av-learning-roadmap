@@ -37,6 +37,8 @@ ls &> all.txt
 ls > all.txt 2>&1
 ```
 
+如果我们想隐藏报错信息，可以将 `stderr` 重定向到 `/dev/null`，这是 Linux 系统中的“黑洞”文件，所有写入其中的数据都会被清除
+
 表示让 `stdout` 指向 `all.txt`，让 `stderr` 指向 `stdout` 指向的位置
 
 ### 退出码
