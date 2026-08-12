@@ -12,8 +12,10 @@ textstats::Stats textstats::analyze_file(const std::string& path) {
     }
     char ch;
     bool in_word = false;
+    bool read_any = false;
 
     while (file.get(ch)) {
+        read_any = true;
         ++stats.bytes;
         if (ch == '\n') {
             ++stats.lines;
@@ -25,7 +27,7 @@ textstats::Stats textstats::analyze_file(const std::string& path) {
             ++stats.words;
         }
     }
-    if (ch != '\n') ++stats.lines;
+    if (read_any && ch != '\n') ++stats.lines;
     return stats;
 }
 
