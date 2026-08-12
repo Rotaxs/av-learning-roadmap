@@ -9,7 +9,6 @@ int main(int argc, char* argv[]) {
     try {
         std::string filepath = argv[1];
         textstats::Stats stats = textstats::analyze_file(filepath);
-        std::cout << "loading file: " << filepath << std::endl;
         std::cout << "bytes=" << stats.bytes 
                 << " lines=" << stats.lines 
                 << " words=" << stats.words 

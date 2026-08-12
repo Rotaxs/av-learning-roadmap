@@ -111,13 +111,11 @@ Stats analyze_file(const std::string& path);
 
 ## 构建与运行
 
-项目尚未实现，以下均为**预期命令**；实现后必须逐条验证，并将占位内容更新为真实命令。
-
 ```bash
 cmake -S . -B build-gcc -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=g++
 cmake --build build-gcc
 ctest --test-dir build-gcc --output-on-failure
-./build-gcc/textstats tests/fixtures/simple.txt
+./build-gcc/textstats tests/fixtures/normal.txt
 ```
 
 Clang 预期通过独立目录验证：

@@ -1,2 +1,0 @@
-Usage: ./textstats <file path>
-Error: Failed to open file: ./no.txt

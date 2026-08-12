@@ -1,27 +1,47 @@
 + cmake -S ../project -B ../project/build-gcc
--- Configuring done (0.0s)
+-- The C compiler identification is GNU 15.2.0
+-- The CXX compiler identification is GNU 15.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.2s)
 -- Generating done (0.0s)
 -- Build files have been written to: /home/aozu/Documents/av-learning-roadmap/Phase1/Week1/project/build-gcc
 + cmake --build ../project/build-gcc
+[ 16%] Building CXX object CMakeFiles/core.dir/src/stats.cpp.o
+[ 33%] Linking CXX static library libcore.a
 [ 33%] Built target core
+[ 50%] Building CXX object CMakeFiles/textstats.dir/src/main.cpp.o
+[ 66%] Linking CXX executable textstats
 [ 66%] Built target textstats
+[ 83%] Building CXX object CMakeFiles/stats_test.dir/tests/stats_test.cpp.o
+[100%] Linking CXX executable stats_test
 [100%] Built target stats_test
 + ctest --test-dir ../project/build-gcc --output-on-failure
 Test project /home/aozu/Documents/av-learning-roadmap/Phase1/Week1/project/build-gcc
     Start 1: normal
-1/6 Test #1: normal ...........................   Passed    0.00 sec
+1/7 Test #1: normal ...........................   Passed    0.00 sec
     Start 2: empty
-2/6 Test #2: empty ............................   Passed    0.00 sec
+2/7 Test #2: empty ............................   Passed    0.00 sec
     Start 3: no_newline
-3/6 Test #3: no_newline .......................   Passed    0.00 sec
+3/7 Test #3: no_newline .......................   Passed    0.00 sec
     Start 4: whitespace
-4/6 Test #4: whitespace .......................   Passed    0.00 sec
+4/7 Test #4: whitespace .......................   Passed    0.00 sec
     Start 5: cli_missing_arg
-5/6 Test #5: cli_missing_arg ..................   Passed    0.00 sec
+5/7 Test #5: cli_missing_arg ..................   Passed    0.00 sec
     Start 6: cli_not_exist
-6/6 Test #6: cli_not_exist ....................   Passed    0.00 sec
+6/7 Test #6: cli_not_exist ....................   Passed    0.00 sec
+    Start 7: cli_multi_files
+7/7 Test #7: cli_multi_files ..................   Passed    0.00 sec
 
-100% tests passed, 0 tests failed out of 6
+100% tests passed, 0 tests failed out of 7
 
 Total Test time (real) =   0.01 sec
 + echo ctest exit status 0

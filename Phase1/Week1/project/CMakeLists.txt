@@ -65,4 +65,5 @@ endforeach()
 
 add_test(NAME cli_missing_arg COMMAND textstats)
 add_test(NAME cli_not_exist COMMAND textstats not_exist.txt)
-set_tests_properties(cli_missing_arg cli_not_exist PROPERTIES WILL_FAIL TRUE)
+add_test(NAME cli_multi_files COMMAND textstats a.txt b.txt)
+set_tests_properties(cli_missing_arg cli_not_exist cli_multi_files PROPERTIES WILL_FAIL TRUE)

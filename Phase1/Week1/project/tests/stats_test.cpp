@@ -17,7 +17,7 @@ void expect_stats(const std::string& path,
     if (!ok) {
         std::cerr << "[FAIL] " << label << std::endl
                   << "Expected: " << " bytes=" << bytes << " lines=" << lines << " words=" << words << std::endl
-                  << "Actual  : " << " bytes=" << s.bytes << " lines=" << s.lines << " words" << s.words << std::endl;
+                  << "Actual  : " << " bytes=" << s.bytes << " lines=" << s.lines << " words=" << s.words << std::endl;
     }
     assert(ok);
 }
