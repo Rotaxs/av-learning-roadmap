@@ -25,6 +25,7 @@ textstats::Stats textstats::analyze_file(const std::string& path) {
             ++stats.words;
         }
     }
+    if (ch != '\n') ++stats.lines;
     return stats;
 }
 
