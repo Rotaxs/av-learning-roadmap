@@ -1,0 +1,28 @@
++ cmake -S ../project -B ../project/build-gcc
+-- Configuring done (0.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/aozu/Documents/av-learning-roadmap/Phase1/Week1/project/build-gcc
++ cmake --build ../project/build-gcc
+[ 33%] Built target core
+[ 66%] Built target textstats
+[100%] Built target stats_test
++ ctest --test-dir ../project/build-gcc --output-on-failure
+Test project /home/aozu/Documents/av-learning-roadmap/Phase1/Week1/project/build-gcc
+    Start 1: normal
+1/6 Test #1: normal ...........................   Passed    0.00 sec
+    Start 2: empty
+2/6 Test #2: empty ............................   Passed    0.00 sec
+    Start 3: no_newline
+3/6 Test #3: no_newline .......................   Passed    0.00 sec
+    Start 4: whitespace
+4/6 Test #4: whitespace .......................   Passed    0.00 sec
+    Start 5: cli_missing_arg
+5/6 Test #5: cli_missing_arg ..................   Passed    0.00 sec
+    Start 6: cli_not_exist
+6/6 Test #6: cli_not_exist ....................   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 6
+
+Total Test time (real) =   0.01 sec
++ echo ctest exit status 0
+ctest exit status 0
