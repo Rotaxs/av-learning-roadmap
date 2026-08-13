@@ -1,0 +1,76 @@
+╭─aozu@kubuntu ~/Documents/av-learning-roadmap/Phase1/Week1/codes/demo10  ‹main*› 
+╰─➤  g++ -g demo.cpp -o demo    
+╭─aozu@kubuntu ~/Documents/av-learning-roadmap/Phase1/Week1/codes/demo10  ‹main*› 
+╰─➤  ./demo                 
+程序开始运行
+正在处理数据
+[1]    107552 segmentation fault (core dumped)  ./demo
+╭─aozu@kubuntu ~/Documents/av-learning-roadmap/Phase1/Week1/codes/demo10  ‹main*› 
+╰─➤  gdb ./demo                                                                    139 ↵
+GNU gdb (Ubuntu 17.1-2ubuntu1) 17.1
+Copyright (C) 2025 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from ./demo...
+(gdb) run
+Starting program: /home/aozu/Documents/av-learning-roadmap/Phase1/Week1/codes/demo10/demo 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/usr/lib/x86_64-linux-gnu/libthread_db.so.1".
+程序开始运行
+正在处理数据
+
+Program received signal SIGSEGV, Segmentation fault.
+0x00005555555551a8 in process_data (ptr=0x0) at demo.cpp:5
+5           *ptr = 100;
+(gdb) p ptr
+$1 = (int *) 0x0
+(gdb) bt
+#0  0x00005555555551a8 in process_data (ptr=0x0) at demo.cpp:5
+#1  0x00005555555551fc in main () at demo.cpp:11
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 107870] will be killed.
+
+Quit anyway? (y or n) y
+╭─aozu@kubuntu ~/Documents/av-learning-roadmap/Phase1/Week1/codes/demo10  ‹main*› 
+╰─➤  g++ -g demo.cpp -o demo
+╭─aozu@kubuntu ~/Documents/av-learning-roadmap/Phase1/Week1/codes/demo10  ‹main*› 
+╰─➤  gdb ./demo             
+GNU gdb (Ubuntu 17.1-2ubuntu1) 17.1
+Copyright (C) 2025 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Type "show copying" and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<https://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+    <http://www.gnu.org/software/gdb/documentation/>.
+
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from ./demo...
+(gdb) run
+Starting program: /home/aozu/Documents/av-learning-roadmap/Phase1/Week1/codes/demo10/demo 
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/usr/lib/x86_64-linux-gnu/libthread_db.so.1".
+程序开始运行
+正在处理数据...
+警告：指针为空，放弃处理！
+程序运行结束
+[Inferior 1 (process 108431) exited normally]
+(gdb) q
