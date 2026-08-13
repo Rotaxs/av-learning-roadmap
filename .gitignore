@@ -36,6 +36,8 @@ Testing/
 *.o
 *.obj
 *.a
+*.i
+*.s
 *.lib
 *.so
 *.so.*
