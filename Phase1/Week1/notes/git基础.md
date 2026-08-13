@@ -4,6 +4,38 @@
 
 ## git 基本指令
 
+### `git add`
+
+将工作区中修改或新建的文件追踪并添加到暂存区（Stage Area）
+
+将制定文件放入暂存区
+
+```bash
+git add <file>
+```
+
+将当前目录及子目录所有文件防区暂存区
+
+```bash
+git add .
+```
+
+### `git commit`
+
+将暂存区中的内容保存一个永久的代码快照，并生成唯一的 SHA-1 哈希值
+
+带信息的直接提交
+
+```bash
+git commit -m "提交信息"
+```
+
+修改最近一次提交记录
+
+```bash
+git commit --amend
+```
+
 ### `git status`
 
 用于查看工作区和暂存区的实时状态
@@ -78,3 +110,60 @@ git diff <branch1> <branch2>
 - `-stat` 不显示具体代码行，仅显示文件修改统计
 - `--name-only` 仅输出有差异的文件路径列表
 - `-w` 忽略所有空格和缩进差异
+
+### `git log`
+
+查看项目的提交历史记录
+
+默认按时间倒序展示完整的历史，包括**完整的 `Commit Hash`**，**作者**，**提交日期**和**提交信息**
+
+```bash
+git log
+```
+
+精简信息，每条提交只显示单行（短 Hash + 提交信息）
+
+```bash
+git log --oneline
+```
+
+限制输出数量
+
+```bash
+git log -n <N>
+```
+
+常用的组合方式
+
+```bash
+git log --graph --oneline --all
+```
+
+显示每次提交影响的文件列表以及增删行数统计
+
+```bash
+git log --stat
+```
+
+### `git show`
+
+查看某次提交的完整改动（作者、时间、`commit message`、以及具体的增删改）
+
+查看最近一次提交（`HEAD`）的信息
+
+```bash
+git show
+```
+
+查看指定 Commit 的信息
+
+```bash
+git show <Commit Hash>
+```
+
+查看某次提交中的指定文件
+
+```bash
+git show <Commit Hash> -- path/to/file
+```
+
