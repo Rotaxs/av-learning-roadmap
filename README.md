@@ -46,31 +46,41 @@
 ├── Phase1/
 │   └── Week1/
 │       ├── 学习路线.md
+│       ├── 学习进度.md
 │       ├── project/
 │       ├── notes/
 │       └── evidence/
 └── .opencode/
+    ├── agents/
     └── skills/
 ```
 
 - `学习路线.md`：两年总路线和阶段闸门。
 - `PhaseN/WeekN/学习路线.md`：可直接执行的每周学习计划。
+- `PhaseN/WeekN/学习进度.md`：每日、每周和阶段验收的核验结果。
 - `project/`：本周源码、构建文件、测试与项目说明。
 - `notes/`：概念笔记、源码阅读记录和复盘。
 - `evidence/`：构建、测试、调试和性能证据。
 - `.opencode/skills/`：OpenCode 辅助 Skill，包含：
   - `weekly-learning-roadmap`：依据总路线生成某周的详细学习计划与项目规格。
+  - `weekly-roadmap-review`：按需审查已生成路线的范围、工作量、执行顺序和验收闭环，并直接修订不合理或缺失内容。
   - `learning-progress-check`：按周路线与总路线的闸门核验每日、每周或阶段任务完成情况，并更新对应周的 `学习进度.md`。
+- `.opencode/agents/`：调用对应 Skill 的周路线生成和学习进度检查 subagent。
 
 ## 使用方式
 
 1. 阅读总路线，确认当前阶段的目标与“不做”范围。
-2. 进入对应的 `PhaseN/WeekN/`，按照每日任务推进。
-3. 将源码放入当周 `project/`，笔记和验证证据分别放入 `notes/`、`evidence/`。
-4. 周末执行总验收；主链路未通过时先修复，不盲目进入下一阶段。
-5. 任务超时时优先取消增强功能，保留测试、调试证据和复盘。
+2. 生成对应周路线；需要时手动审查并修订路线是否合理可行。
+3. 进入对应的 `PhaseN/WeekN/`，按照每日任务推进。
+4. 将源码放入当周 `project/`，笔记和验证证据分别放入 `notes/`、`evidence/`。
+5. 周末执行总验收；主链路未通过时先修复，不盲目进入下一阶段。
+6. 任务超时时优先取消增强功能，保留测试、调试证据和复盘。
 
-使用 OpenCode 时，可以直接提出“生成第 N 周的学习路线”，仓库内的 `weekly-learning-roadmap` Skill 会依据总路线创建对应周计划与项目规格；每周结束后可提出“检查本周学习进度”，由 `learning-progress-check` Skill 依据路线标准核验完成情况并更新 `学习进度.md`。
+使用 OpenCode 时，可以按需提出：
+
+- “生成第 N 周的学习路线”：`weekly-learning-roadmap` 根据总路线创建周计划与项目规格。
+- “检查第 N 周路线是否合理可行”：`weekly-roadmap-review` 审查并修订目标周的 `学习路线.md` 和 `project/README.md`。该 Skill 仅手动触发，不修改学习代码、笔记、证据或 `学习进度.md`。
+- “检查本周学习进度”：`learning-progress-check` 根据路线标准核验成果，并更新对应周的 `学习进度.md`。
 
 ## 学习原则
 
@@ -82,4 +92,4 @@
 
 ## 说明
 
-路线和 skill 均由 AI 生成
+路线与 Skill 由 AI 辅助生成和维护，实际学习成果以可复现的代码、测试、日志和验收记录为准。
