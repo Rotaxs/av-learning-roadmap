@@ -1,5 +1,7 @@
 {
     set -x
+    echo "test date: "
+    date
     cmake -S ../project -B ../project/build-gcc
     cmake --build ../project/build-gcc
     ctest --test-dir ../project/build-gcc --output-on-failure
